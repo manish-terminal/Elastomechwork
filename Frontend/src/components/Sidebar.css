@@ -1,0 +1,130 @@
+/* General Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #004d99;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out; /* Smooth animations */
+}
+
+.sidebar-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 10px;
+  color: white;
+  text-transform: uppercase; /* Make title uppercase */
+  letter-spacing: 1px; /* Add spacing for a clean look */
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-item {
+  margin: 15px 0;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.sidebar-link:hover {
+  background-color: #0066cc;
+  transform: translateX(5px); /* Add a slight hover effect */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlight Active Link */
+.sidebar-link.active {
+  background-color: #003366;
+  font-weight: bold;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-item {
+    margin: 10px 0;
+  }
+
+  .sidebar-link {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Extra Small Screens (<=480px) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+  }
+
+  .sidebar-title {
+    font-size: 1.2rem;
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebar-item {
+    margin: 8px 0;
+  }
+
+  .sidebar-link {
+    font-size: 0.9rem;
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Scrollbar Styles */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #0066cc;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #004d99;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #003366;
+}
